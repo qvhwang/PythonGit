@@ -120,7 +120,7 @@ while True:
 #Trang 36
 print("#Trang 36")
 print("#Bài 11")
-
+print("Kiểm tra số nguyên tố")
 def kiem_tra_nguyen_to(n):
     if n <= 1:
         return False 
@@ -128,13 +128,14 @@ def kiem_tra_nguyen_to(n):
         if n % i == 0:
             return False
     return True 
-
-n = int(input("Nhập vào một số nguyên dương N (N > 1): "))
-
-if kiem_tra_nguyen_to(n):
-    print(f"Số {n} là số nguyên tố!")
-else:
-    print(f"Số {n} không phải là số nguyên tố!")
+try:
+    n = int(input("Nhập vào một số nguyên dương N (N > 1): "))
+    if kiem_tra_nguyen_to(n):
+        print(f"Số {n} là số nguyên tố!")
+    else:
+        print(f"Số {n} không phải là số nguyên tố!")
+except ValueError:
+    print("Vui lòng nhập số nguyên dương.")
 
 #Trang 37
 print("#Trang 37")

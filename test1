@@ -1,0 +1,14 @@
+def he_10_sang_he_2(n):
+
+  nhiphan = ""
+  while n > 0:
+    nhiphan = str(n % 2) +nhiphan
+    n //= 2
+  return nhiphan
+
+# Nhập số từ người dùng
+num = int(input("Nhập một số nguyên dương: "))
+
+# Chuyển đổi và in kết quả
+ketqua = he_10_sang_he_2(num)
+print(f"{num} (hệ 10) = {ketqua} (hệ 2)")

@@ -1,14 +1,7 @@
-def he_10_sang_he_2(n):
+def cal_point():
+    scores = list(map(float, input("Nhập danh sách điểm (cách nhau bởi dấu cách): ").split(" ")))
+    avg_10 = sum(scores) / len(scores)
+    avg_4 = (avg_10 / 10) * 4
+    return f"Điểm trung bình hệ 10: {avg_10:.2f}, hệ 4: {avg_4:.2f}"
 
-  nhiphan = ""
-  while n > 0:
-    nhiphan = str(n % 2) +nhiphan
-    n //= 2
-  return nhiphan
-
-# Nhập số từ người dùng
-num = int(input("Nhập một số nguyên dương: "))
-
-# Chuyển đổi và in kết quả
-ketqua = he_10_sang_he_2(num)
-print(f"{num} (hệ 10) = {ketqua} (hệ 2)")
+print(cal_point())

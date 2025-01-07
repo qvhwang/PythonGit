@@ -1,23 +1,22 @@
-def tinh_toan_chieu_cao():
-    so_luong_sinh_vien = int(input("Nhập số lượng sinh viên: "))
-    chieu_cao_str = input("Nhập chiều cao của các sinh viên (cách nhau bởi dấu phẩy): ")
-    chieu_cao = chieu_cao_str.split(',')
-
-    while len(chieu_cao) != so_luong_sinh_vien:
-        print("Số lượng chiều cao không hợp lệ. Vui lòng nhập lại!")
-        chieu_cao_str = input("Nhập chiều cao của các sinh viên (cách nhau bởi dấu cách): ")
-        chieu_cao = chieu_cao_str.split(' ')
-        chieu_cao = [float(cao) for cao in chieu_cao]
-
-        chieu_cao_cao_nhat = max(chieu_cao)
-        chieu_cao_thap_nhat = min(chieu_cao)
-        chieu_cao_trung_binh = sum(chieu_cao) / len(chieu_cao)
-        so_luong_sinh_vien_cao_hon_tb = sum(1 for cao in chieu_cao if cao >= chieu_cao_trung_binh)
-        print("Chiều cao cao nhất:", chieu_cao_cao_nhat, "m")
-
-        print("Chiều cao thấp nhất:", chieu_cao_thap_nhat, "m")
-
-        print("Chiều cao trung bình:", chieu_cao_trung_binh, "m")
-
-        print("Số lượng sinh viên có chiều cao >= chiều cao trung bình:", so_luong_sinh_vien_cao_hon_tb)
-tinh_toan_chieu_cao()
+print("#Trang 36")
+print("#Bài 11")
+print("Kiểm tra số nguyên tố")
+while True:
+    def kiem_tra_nguyen_to(n):
+        if n <= 1:
+            return False 
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+    try:
+        n = int(input("Nhập vào một số nguyên dương N (N > 1): "))
+        if kiem_tra_nguyen_to(n):
+            print(f"Số {n} là số nguyên tố!")
+            break
+        else:
+            print(f"Số {n} không phải là số nguyên tố!")
+            break
+    except ValueError:
+        print("Vui lòng nhập số nguyên dương.")
+        

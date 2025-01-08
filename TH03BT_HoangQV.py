@@ -3,6 +3,7 @@ print("#Trang 17")
 print("#Bài 15_a")
 print("#1) ")
 def greeting():
+    
     name = str(input("Nhập tên: "))
     year = int(input("Nhập năm sinh: "))
     return f"Xin chào {name}, bạn sinh năm {year}"

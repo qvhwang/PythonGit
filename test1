@@ -1,7 +1,10 @@
-def cal_point():
-    scores = list(map(float, input("Nhập danh sách điểm (cách nhau bởi dấu cách): ").split(" ")))
-    avg_10 = sum(scores) / len(scores)
-    avg_4 = (avg_10 / 10) * 4
-    return f"Điểm trung bình hệ 10: {avg_10:.2f}, hệ 4: {avg_4:.2f}"
+import numpy as np
+path = 'dayso1_bai17.txt'
+diem_2a = np.loadtxt(path, delimiter = ' ', dtype=np.int32)
 
-print(cal_point())
+print(diem_2a)
+mean_2a = diem_2a.mean(axis = 0)
+#axis = 0: theo hàng
+#axis = 1: theo cột
+for i in range(0, mean_2a.size):
+    print('Điểm trung bình của học sinh ', i, ' : ',mean_2a[i])
